@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Squad Queue Monitor - Automatic Queue Position Tracker for Squad Game</title>
+  <meta name="description" content="Squad Queue Monitor is a lightweight desktop app that automatically tracks your queue position in Squad game and alerts you when you're in. Free download.">
+  <meta name="keywords" content="Squad game, queue monitor, game tools, queue tracker, Squad helper, gaming utility">
+  <meta property="og:title" content="Squad Queue Monitor - Never Miss Your Queue Again">
+  <meta property="og:description" content="Automatically track your Squad game queue position with smart screen capture technology.">
+  <meta property="og:image" content="/assets/og-image.png">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://squadqueuemonitor.com">
+  <link rel="alternate" hreflang="en" href="https://squadqueuemonitor.com/en">
+  <link rel="alternate" hreflang="uk" href="https://squadqueuemonitor.com/ua">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon-16x16.png">
+  <link rel="manifest" href="/assets/meta/site.webmanifest">
+  <!-- Structured data for better SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Squad Queue Monitor",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Windows",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Automatically track your queue position in Squad game and get notified when you're in."
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Language selector and content switcher -->
+  <script>
+    function switchLanguage(lang) {
+      // Hide all language content
+      document.querySelectorAll('.lang-content').forEach(el => {
+        el.classList.add('hidden');
+      });
+      
+      // Show selected language content
+      document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+        el.classList.remove('hidden');
+      });
+      
+      // Update active language button
+      document.querySelectorAll('.lang-button').forEach(el => {
+        el.classList.remove('border-yellow-500');
+        el.classList.add('border-transparent');
+      });
+      document.querySelector(`.lang-button-${lang}`).classList.remove('border-transparent');
+      document.querySelector(`.lang-button-${lang}`).classList.add('border-yellow-500');
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+      
+      // Save language preference
+      localStorage.setItem('preferred-language', lang);
+    }
+    
+    // Set default language or load from storage
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferred-language') || 'en';
+      switchLanguage(savedLang);
+    });
+  </script>
+
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row items-center justify-between p-4 border-b shadow-sm space-y-4 md:space-y-0">
+    <div class="flex items-center space-x-4">
+      <img src="/assets/logo.png" alt="Squad Monitor Logo" class="h-12 w-auto">
+      <h1 class="text-2xl font-bold">Squad Queue Monitor</h1>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+      <a href="#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-en">
+        Download
+      </a>
+      <a href="#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-uk hidden">
+        Завантажити
+      </a>
+      <div class="flex space-x-2">
+        <button onclick="switchLanguage('en')" class="lang-button lang-button-en border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="/assets/united-k.png" alt="EN" class="h-6 w-auto">
+        </button>
+        <button onclick="switchLanguage('uk')" class="lang-button lang-button-uk border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="/assets/ukraine.png" alt="UA" class="h-6 w-auto">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <!-- Hero Section -->
+    <section class="text-center mb-16">
+      <!-- English content -->
+      <div class="lang-content lang-en">
+        <h2 class="text-4xl font-bold mb-4">Automatically Track Your Queue Status in Squad</h2>
+        <p class="text-lg text-gray-600">Squad Queue Monitor is a lightweight desktop app that watches your queue position and alerts you when you're in. No game interference — just smart screen capture and OCR detection.</p>
+      </div>
+      
+      <!-- Ukrainian content -->
+      <div class="lang-content lang-uk hidden">
+        <h2 class="text-4xl font-bold mb-4">Автоматичне відстеження статусу черги в Squad</h2>
+        <p class="text-lg text-gray-600">Squad Queue Monitor — це легка програма для робочого столу, яка спостерігає за вашою позицією в черзі та сповіщає вас, коли ви потрапляєте до гри. Жодного втручання в гру — лише розумне захоплення екрану та OCR-розпізнавання.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="grid md:grid-cols-2 gap-12 mb-16">
+      <div>
+        <!-- English content -->
+        <div class="lang-content lang-en">
+          <h3 class="text-2xl font-semibold mb-4">Why Squad Queue Monitor?</h3>
+          <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <li>Stay informed with real-time visual and sound notifications.</li>
+            <li>No need to alt-tab — focus on other tasks while you wait.</li>
+            <li>Multi-language support: English and Ukrainian included.</li>
+            <li>Customizable detection patterns and queue logic.</li>
+            <li>Built-in debug tools and screenshot capture for easy troubleshooting.</li>
+          </ul>
+        </div>
+        
+        <!-- Ukrainian content -->
+        <div class="lang-content lang-uk hidden">
+          <h3 class="text-2xl font-semibold mb-4">Чому варто обрати Squad Queue Monitor?</h3>
+          <ul class="list-disc list-inside space-y-3 text-gray-700">
+            <li>Залишайтеся в курсі завдяки візуальним та звуковим сповіщенням у реальному часі.</li>
+            <li>Не потрібно перемикатися між вікнами — займайтеся іншими справами під час очікування.</li>
+            <li>Підтримка декількох мов: включені англійська та українська.</li>
+            <li>Налаштовувані шаблони виявлення та логіка черги.</li>
+            <li>Вбудовані інструменти налагодження та захоплення знімків екрану для легкого усунення проблем.</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="/assets/screen1.png" alt="App Preview" class="rounded shadow-lg">
+      </div>
+    </section>
+
+    <!-- Screenshot Gallery -->
+    <section class="mb-16">
+      <!-- English content -->
+      <div class="lang-content lang-en">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Product Screenshots</h3>
+      </div>
+      
+      <!-- Ukrainian content -->
+      <div class="lang-content lang-uk hidden">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Знімки екрану програми</h3>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/assets/screen2.png" alt="Screenshot 1" class="rounded shadow-md">
+        <img src="/assets/screen3.png" alt="Screenshot 2" class="rounded shadow-md">
+        <img src="/assets/screen4.jpg" alt="Screenshot 3" class="rounded shadow-md">
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="bg-gray-100 p-6 rounded mb-16">
+      <!-- English content -->
+      <div class="lang-content lang-en">
+        <h3 class="text-xl font-semibold mb-2">Disclaimer</h3>
+        <p class="text-gray-700 mb-4">
+          We are not responsible for any bans or penalties you may incur in the game. Squad Queue Monitor does not interact with or modify the game in any way — it simply analyzes your screen using OCR technology. Based on our testing, there have been no reported bans associated with using this tool.
+        </p>
+        <p class="text-gray-700 font-medium">
+          Our code is completely open-source, so you can review it yourself and be confident in its safety and transparency.
+        </p>
+      </div>
+      
+      <!-- Ukrainian content -->
+      <div class="lang-content lang-uk hidden">
+        <h3 class="text-xl font-semibold mb-2">Застереження</h3>
+        <p class="text-gray-700 mb-4">
+          Ми не несемо відповідальності за будь-які бани чи штрафи, які ви можете отримати в грі. Squad Queue Monitor жодним чином не взаємодіє з грою та не модифікує її — він просто аналізує ваш екран за допомогою технології OCR. За результатами наших тестувань не було зафіксовано жодних банів, пов'язаних із використанням цього інструменту.
+        </p>
+        <p class="text-gray-700 font-medium">
+          Наш код повністю відкритий, тому ви можете переглянути його самостійно та бути впевненими в його безпеці та прозорості.
+        </p>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="text-center py-12 border-t">
+      <!-- English content -->
+      <div class="lang-content lang-en">
+        <h3 class="text-2xl font-bold mb-4">Get Squad Queue Monitor</h3>
+        <p class="text-gray-600 mb-6">Start monitoring your queue today. Choose the installation method that fits you.</p>
+        <a href="https://github.com/yourusername/squad-queue-monitor/releases" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition">
+          Download from GitHub
+        </a>
+      </div>
+      
+      <!-- Ukrainian content -->
+      <div class="lang-content lang-uk hidden">
+        <h3 class="text-2xl font-bold mb-4">Отримайте Squad Queue Monitor</h3>
+        <p class="text-gray-600 mb-6">Почніть відстежувати вашу чергу вже сьогодні. Виберіть спосіб встановлення, який вам підходить.</p>
+        <a href="https://github.com/yourusername/squad-queue-monitor/releases" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded transition">
+          Завантажити з GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-500 text-sm border-t">
+    <!-- English content -->
+    <div class="lang-content lang-en">
+      &copy; 2025 Blockmaterial. All rights reserved.
+    </div>
+    
+    <!-- Ukrainian content -->
+    <div class="lang-content lang-uk hidden">
+      &copy; 2025 Blockmaterial. Усі права захищені.
+    </div>
+  </footer>
+
+  <!-- Additional SEO optimizations -->
+  <script>
+    // Add structured event tracking for Google Analytics (if added)
+    function trackDownload() {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'download', {
+          'event_category': 'app',
+          'event_label': 'github_download'
+        });
+      }
+    }
+
+    // Add event listeners to download buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadLinks = document.querySelectorAll('a[href*="github.com"]');
+      downloadLinks.forEach(link => {
+        link.addEventListener('click', trackDownload);
+      });
+    });
+  </script>
+</body>
+
+</html>
