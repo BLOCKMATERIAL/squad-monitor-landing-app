@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - Squad Queue Monitor</title>
+  <meta name="description" content="Terms of Service for Squad Queue Monitor - Information about usage terms and disclaimers">
+  <link rel="canonical" href="https://squadqueuemonitor.com/terms">
+  <link rel="alternate" hreflang="en" href="https://squadqueuemonitor.com/terms">
+  <link rel="alternate" hreflang="uk" href="https://squadqueuemonitor.com/ua/terms">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <!-- Language selector script -->
+  <script>
+    function switchLanguage(lang) {
+      // Hide all language content
+      document.querySelectorAll('.lang-content').forEach(el => {
+        el.classList.add('hidden');
+      });
+      
+      // Show selected language content
+      document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+        el.classList.remove('hidden');
+      });
+      
+      // Update active language button
+      document.querySelectorAll('.lang-button').forEach(el => {
+        el.classList.remove('border-yellow-500');
+        el.classList.add('border-transparent');
+      });
+      document.querySelector(`.lang-button-${lang}`).classList.remove('border-transparent');
+      document.querySelector(`.lang-button-${lang}`).classList.add('border-yellow-500');
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+      
+      // Save language preference
+      localStorage.setItem('preferred-language', lang);
+    }
+    
+    // Set default language or load from storage
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferred-language') || 'en';
+      switchLanguage(savedLang);
+    });
+  </script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row items-center justify-between p-4 border-b shadow-sm space-y-4 md:space-y-0">
+    <div class="flex items-center space-x-4">
+      <a href="index.html" class="flex items-center space-x-4">
+        <img src="./assets/logo.png" alt="Squad Monitor Logo" class="h-12 w-auto">
+        <h1 class="text-2xl font-bold">Squad Queue Monitor</h1>
+      </a>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+      <a href="index.html#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-en">
+        Download
+      </a>
+      <a href="index.html#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-uk hidden">
+        Завантажити
+      </a>
+      <div class="flex space-x-2">
+        <button onclick="switchLanguage('en')" class="lang-button lang-button-en border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="./assets/united-k.png" alt="EN" class="h-6 w-auto">
+        </button>
+        <button onclick="switchLanguage('uk')" class="lang-button lang-button-uk border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="./assets/ukraine.png" alt="UA" class="h-6 w-auto">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Terms Header -->
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-bold mb-2 lang-content lang-en">Terms of Service</h2>
+      <h2 class="text-3xl font-bold mb-2 lang-content lang-uk hidden">Умови Використання</h2>
+      <p class="text-gray-600 lang-content lang-en">Last Updated: May 19, 2025</p>
+      <p class="text-gray-600 lang-content lang-uk hidden">Останнє оновлення: 19 травня 2025</p>
+    </div>
+
+    <!-- Terms of Service Content - ENGLISH -->
+    <div class="prose max-w-none lang-content lang-en">
+      <p>
+        Please read these Terms of Service ("Terms") carefully before using the Squad Queue Monitor application.
+      </p>
+
+      <h3>1. Acceptance of Terms</h3>
+      <p>
+        By downloading, installing, or using Squad Queue Monitor ("the Application"), you agree to be bound by these Terms. If you disagree with any part of the terms, you do not have permission to access or use the Application.
+      </p>
+
+      <h3>2. Educational and Entertainment Purpose</h3>
+      <p>
+        The Application is provided strictly for educational and entertainment purposes only. It is designed as a learning tool and a convenience utility to enhance your gaming experience without modifying the game itself.
+      </p>
+
+      <h3>3. Description of Service</h3>
+      <p>
+        Squad Queue Monitor is a desktop application that:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Uses OCR (Optical Character Recognition) technology to detect your position in the game queue</li>
+        <li>Monitors the game screen through capturing screenshots</li>
+        <li>Provides notifications when your queue status changes</li>
+        <li>Runs locally on your machine without sending data to external servers</li>
+      </ul>
+      <p>
+        The Application does not interact with the game code, does not modify any game files, and does not inject any code into the game process.
+      </p>
+
+      <h3>4. Disclaimer of Liability</h3>
+      <p>
+        <strong>THE APPLICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</strong> We expressly disclaim any and all liability for:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Any actions taken against your game account by the game developers or publishers, including but not limited to suspension, banning, or restrictions</li>
+        <li>Any damage to your computer system, loss of data, or other harm that results from your download or use of the Application</li>
+        <li>The accuracy, reliability, availability, or suitability of the Application for any purpose</li>
+        <li>Any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of the Application</li>
+      </ul>
+      <p>
+        By using the Application, you acknowledge and agree that you do so at your own risk and discretion.
+      </p>
+
+      <h3>5. Intellectual Property</h3>
+      <p>
+        The Application is open-source software. The source code is made available for review and can be modified according to the terms of the license provided in the GitHub repository. The Application is not affiliated with, endorsed by, or connected to the developers or publishers of the Squad game.
+      </p>
+
+      <h3>6. User Obligations</h3>
+      <p>
+        As a user of the Application, you agree:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>To use the Application in compliance with all applicable laws and regulations</li>
+        <li>Not to use the Application for any purpose that is unlawful or prohibited by these Terms</li>
+        <li>To acknowledge that the use of third-party software with games may violate the terms of service of those games</li>
+        <li>To assume all risks associated with the use of the Application</li>
+      </ul>
+
+      <h3>7. Modification of Terms</h3>
+      <p>
+        We reserve the right to modify or replace these Terms at any time. It is your responsibility to check the Terms periodically for changes. Your continued use of the Application following the posting of any changes to the Terms constitutes acceptance of those changes.
+      </p>
+
+      <h3>8. Contact Information</h3>
+      <p>
+        If you have any questions about these Terms, please contact us at: <a href="mailto:materialblock@gmail.com" class="text-yellow-600 hover:text-yellow-800">materialblock@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Terms of Service Content - UKRAINIAN -->
+    <div class="prose max-w-none lang-content lang-uk hidden">
+      <p>
+        Будь ласка, уважно ознайомтеся з цими Умовами використання ("Умови") перед використанням додатку Squad Queue Monitor.
+      </p>
+
+      <h3>1. Прийняття Умов</h3>
+      <p>
+        Завантажуючи, встановлюючи або використовуючи Squad Queue Monitor ("Додаток"), ви погоджуєтеся дотримуватися цих Умов. Якщо ви не згодні з будь-якою частиною умов, вам не дозволяється доступ або використання Додатку.
+      </p>
+
+      <h3>2. Навчальна та розважальна мета</h3>
+      <p>
+        Додаток надається виключно в навчальних та розважальних цілях. Він розроблений як навчальний інструмент та зручна утиліта для покращення вашого ігрового досвіду без модифікації самої гри.
+      </p>
+
+      <h3>3. Опис сервісу</h3>
+      <p>
+        Squad Queue Monitor - це настільний додаток, який:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Використовує технологію OCR (оптичне розпізнавання символів) для визначення вашої позиції в ігровій черзі</li>
+        <li>Моніторить екран гри шляхом захоплення знімків екрану</li>
+        <li>Надає сповіщення, коли статус вашої черги змінюється</li>
+        <li>Працює локально на вашому комп'ютері без надсилання даних на зовнішні сервери</li>
+      </ul>
+      <p>
+        Додаток не взаємодіє з кодом гри, не модифікує жодні ігрові файли та не впроваджує жодного коду в ігровий процес.
+      </p>
+
+      <h3>4. Відмова від відповідальності</h3>
+      <p>
+        <strong>ДОДАТОК НАДАЄТЬСЯ "ЯК Є", БЕЗ ГАРАНТІЙ БУДЬ-ЯКОГО ВИДУ, ЯВНИХ АБО НЕЯВНИХ.</strong> Ми прямо відмовляємося від будь-якої відповідальності за:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Будь-які дії, вжиті проти вашого ігрового облікового запису розробниками або видавцями гри, включаючи, але не обмежуючись, призупинення, блокування або обмеження</li>
+        <li>Будь-які пошкодження вашої комп'ютерної системи, втрату даних або інші збитки, які виникають внаслідок завантаження або використання Додатку</li>
+        <li>Точність, надійність, доступність або придатність Додатку для будь-яких цілей</li>
+        <li>Будь-які прямі, непрямі, випадкові, спеціальні або побічні збитки, що виникають внаслідок або пов'язані з використанням Додатку</li>
+      </ul>
+      <p>
+        Використовуючи Додаток, ви визнаєте та погоджуєтеся, що робите це на власний ризик та розсуд.
+      </p>
+
+      <h3>5. Інтелектуальна власність</h3>
+      <p>
+        Додаток є програмним забезпеченням з відкритим кодом. Вихідний код доступний для перегляду та може бути модифікований відповідно до умов ліцензії, наданої в репозиторії GitHub. Додаток не пов'язаний, не схвалений або не підтримується розробниками або видавцями гри Squad.
+      </p>
+
+      <h3>6. Обов'язки користувача</h3>
+      <p>
+        Як користувач Додатку, ви погоджуєтеся:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Використовувати Додаток відповідно до всіх застосовних законів та правил</li>
+        <li>Не використовувати Додаток для будь-яких цілей, які є незаконними або забороненими цими Умовами</li>
+        <li>Визнати, що використання стороннього програмного забезпечення з іграми може порушувати умови використання цих ігор</li>
+        <li>Взяти на себе всі ризики, пов'язані з використанням Додатку</li>
+      </ul>
+
+      <h3>7. Зміна Умов</h3>
+      <p>
+        Ми залишаємо за собою право змінювати або замінювати ці Умови в будь-який час. Ви зобов'язані періодично перевіряти Умови на наявність змін. Продовження використання Додатку після публікації будь-яких змін до Умов означає прийняття цих змін.
+      </p>
+
+      <h3>8. Контактна інформація</h3>
+      <p>
+        Якщо у вас виникли запитання щодо цих Умов, будь ласка, зв'яжіться з нами за адресою: <a href="mailto:materialblock@gmail.com" class="text-yellow-600 hover:text-yellow-800">materialblock@gmail.com</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-8 text-gray-500 text-sm border-t">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-center items-center md:justify-between">
+        <p class="lang-content lang-en">
+          &copy; 2025 Blockmaterial. All rights reserved.
+        </p>
+        <p class="lang-content lang-uk hidden">
+          &copy; 2025 Blockmaterial. Усі права захищені.
+        </p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+          <a href="index.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-en">Home</a>
+          <a href="terms.html" class="text-gray-500 hover:text-yellow-600 font-semibold lang-content lang-en">Terms of Service</a>
+          <a href="privacy-policy.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-en">Privacy Policy</a>
+          
+          <a href="index.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-uk hidden">Головна</a>
+          <a href="terms.html" class="text-gray-500 hover:text-yellow-600 font-semibold lang-content lang-uk hidden">Умови використання</a>
+          <a href="privacy-policy.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-uk hidden">Політика конфіденційності</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Squad Queue Monitor</title>
+  <meta name="description" content="Privacy Policy for Squad Queue Monitor - Information about how we handle your data">
+  <link rel="canonical" href="https://squadqueuemonitor.com/privacy-policy">
+  <link rel="alternate" hreflang="en" href="https://squadqueuemonitor.com/privacy-policy">
+  <link rel="alternate" hreflang="uk" href="https://squadqueuemonitor.com/ua/privacy-policy">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+  <!-- Language selector script -->
+  <script>
+    function switchLanguage(lang) {
+      // Hide all language content
+      document.querySelectorAll('.lang-content').forEach(el => {
+        el.classList.add('hidden');
+      });
+      
+      // Show selected language content
+      document.querySelectorAll(`.lang-${lang}`).forEach(el => {
+        el.classList.remove('hidden');
+      });
+      
+      // Update active language button
+      document.querySelectorAll('.lang-button').forEach(el => {
+        el.classList.remove('border-yellow-500');
+        el.classList.add('border-transparent');
+      });
+      document.querySelector(`.lang-button-${lang}`).classList.remove('border-transparent');
+      document.querySelector(`.lang-button-${lang}`).classList.add('border-yellow-500');
+      
+      // Update HTML lang attribute
+      document.documentElement.lang = lang;
+      
+      // Save language preference
+      localStorage.setItem('preferred-language', lang);
+    }
+    
+    // Set default language or load from storage
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferred-language') || 'en';
+      switchLanguage(savedLang);
+    });
+  </script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row items-center justify-between p-4 border-b shadow-sm space-y-4 md:space-y-0">
+    <div class="flex items-center space-x-4">
+      <a href="index.html" class="flex items-center space-x-4">
+        <img src="./assets/logo.png" alt="Squad Monitor Logo" class="h-12 w-auto">
+        <h1 class="text-2xl font-bold">Squad Queue Monitor</h1>
+      </a>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+      <a href="index.html#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-en">
+        Download
+      </a>
+      <a href="index.html#download" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded transition duration-300 lang-content lang-uk hidden">
+        Завантажити
+      </a>
+      <div class="flex space-x-2">
+        <button onclick="switchLanguage('en')" class="lang-button lang-button-en border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="./assets/united-k.png" alt="EN" class="h-6 w-auto">
+        </button>
+        <button onclick="switchLanguage('uk')" class="lang-button lang-button-uk border-2 border-transparent hover:border-yellow-300 p-1 rounded transition">
+          <img src="./assets/ukraine.png" alt="UA" class="h-6 w-auto">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <!-- Privacy Policy Header -->
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-bold mb-2 lang-content lang-en">Privacy Policy</h2>
+      <h2 class="text-3xl font-bold mb-2 lang-content lang-uk hidden">Політика Конфіденційності</h2>
+      <p class="text-gray-600 lang-content lang-en">Last Updated: May 19, 2025</p>
+      <p class="text-gray-600 lang-content lang-uk hidden">Останнє оновлення: 19 травня 2025</p>
+    </div>
+
+    <!-- Privacy Policy Content - ENGLISH -->
+    <div class="prose max-w-none lang-content lang-en">
+      <p>
+        Thank you for using Squad Queue Monitor. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our application.
+      </p>
+
+      <h3>1. Information Collection</h3>
+      <p>
+        <strong>Squad Queue Monitor does not collect or transmit personal data.</strong> Our application operates entirely on your local machine and does not:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Connect to any servers</li>
+        <li>Transmit any user information</li>
+        <li>Track or monitor user behavior</li>
+        <li>Collect personal information</li>
+        <li>Access files unrelated to its operation</li>
+      </ul>
+      <p>
+        The application only captures screenshots of your game screen for the purpose of detecting queue status through OCR (Optical Character Recognition) technology. These screenshots are processed locally and are not transmitted outside of your computer.
+      </p>
+
+      <h3>2. Local Storage</h3>
+      <p>
+        Squad Queue Monitor may store configuration settings on your local device to remember your preferences. This data never leaves your device and is only used to improve your experience with the application.
+      </p>
+
+      <h3>3. Third-Party Services</h3>
+      <p>
+        Our application does not integrate with any third-party services, analytics tools, or APIs that would collect information about you or your usage of the application.
+      </p>
+
+      <h3>4. Educational and Entertainment Purposes</h3>
+      <p>
+        Squad Queue Monitor is provided for educational and entertainment purposes only. The application is intended as a utility tool to enhance your gaming experience without modifying or interfering with the game itself.
+      </p>
+
+      <h3>5. Disclaimer of Responsibility</h3>
+      <p>
+        We expressly disclaim any responsibility for:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Any actions taken against your game account by the game publisher or developer</li>
+        <li>Any issues or conflicts that arise from using our application</li>
+        <li>Data loss or system instability that may occur while using the application</li>
+        <li>Accuracy of OCR detection and notifications</li>
+      </ul>
+      <p>
+        You acknowledge and agree that you use Squad Queue Monitor at your own risk.
+      </p>
+
+      <h3>6. Open Source</h3>
+      <p>
+        Our application is open-source. You can review the code to verify our privacy practices and confirm that no data collection takes place.
+      </p>
+
+      <h3>7. Changes to Privacy Policy</h3>
+      <p>
+        We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. Changes to this Privacy Policy are effective when they are posted on this page.
+      </p>
+
+      <h3>8. Contact Us</h3>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:materialblock@gmail.com" class="text-yellow-600 hover:text-yellow-800">materialblock@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Privacy Policy Content - UKRAINIAN -->
+    <div class="prose max-w-none lang-content lang-uk hidden">
+      <p>
+        Дякуємо за використання Squad Queue Monitor. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо, розкриваємо та захищаємо вашу інформацію під час використання нашого додатку.
+      </p>
+
+      <h3>1. Збір інформації</h3>
+      <p>
+        <strong>Squad Queue Monitor не збирає та не передає особисті дані.</strong> Наш додаток працює повністю на вашому локальному комп'ютері та не:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Підключається до будь-яких серверів</li>
+        <li>Передає будь-яку інформацію користувача</li>
+        <li>Відстежує або моніторить поведінку користувача</li>
+        <li>Збирає особисту інформацію</li>
+        <li>Отримує доступ до файлів, не пов'язаних з його роботою</li>
+      </ul>
+      <p>
+        Додаток лише робить знімки екрану вашої гри для визначення статусу черги за допомогою технології OCR (оптичне розпізнавання символів). Ці знімки екрану обробляються локально і не передаються за межі вашого комп'ютера.
+      </p>
+
+      <h3>2. Локальне зберігання</h3>
+      <p>
+        Squad Queue Monitor може зберігати налаштування конфігурації на вашому локальному пристрої, щоб запам'ятати ваші уподобання. Ці дані ніколи не покидають ваш пристрій і використовуються лише для покращення вашого досвіду роботи з додатком.
+      </p>
+
+      <h3>3. Сторонні сервіси</h3>
+      <p>
+        Наш додаток не інтегрується з жодними сторонніми сервісами, аналітичними інструментами або API, які могли б збирати інформацію про вас або ваше використання додатку.
+      </p>
+
+      <h3>4. Навчальні та розважальні цілі</h3>
+      <p>
+        Squad Queue Monitor надається виключно в навчальних та розважальних цілях. Додаток призначений як утилітарний інструмент для покращення вашого ігрового досвіду без модифікації або втручання в саму гру.
+      </p>
+
+      <h3>5. Відмова від відповідальності</h3>
+      <p>
+        Ми прямо відмовляємося від будь-якої відповідальності за:
+      </p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Будь-які дії, вжиті проти вашого ігрового облікового запису видавцем або розробником гри</li>
+        <li>Будь-які проблеми або конфлікти, які виникають під час використання нашого додатку</li>
+        <li>Втрату даних або нестабільність системи, яка може виникнути під час використання додатку</li>
+        <li>Точність OCR-розпізнавання та сповіщень</li>
+      </ul>
+      <p>
+        Ви визнаєте та погоджуєтеся, що використовуєте Squad Queue Monitor на власний ризик.
+      </p>
+
+      <h3>6. Відкритий код</h3>
+      <p>
+        Наш додаток має відкритий код. Ви можете переглянути код, щоб перевірити наші практики конфіденційності та підтвердити, що збір даних не відбувається.
+      </p>
+
+      <h3>7. Зміни до Політики конфіденційності</h3>
+      <p>
+        Ми можемо час від часу оновлювати нашу Політику конфіденційності. Ми повідомимо вас про будь-які зміни, опублікувавши нову Політику конфіденційності на цій сторінці. Зміни до цієї Політики конфіденційності набувають чинності після їх публікації на цій сторінці.
+      </p>
+
+      <h3>8. Зв'яжіться з нами</h3>
+      <p>
+        Якщо у вас виникли запитання щодо цієї Політики конфіденційності, будь ласка, зв'яжіться з нами за адресою: <a href="mailto:materialblock@gmail.com" class="text-yellow-600 hover:text-yellow-800">materialblock@gmail.com</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-8 text-gray-500 text-sm border-t">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-center items-center md:justify-between">
+        <p class="lang-content lang-en">
+          &copy; 2025 Blockmaterial. All rights reserved.
+        </p>
+        <p class="lang-content lang-uk hidden">
+          &copy; 2025 Blockmaterial. Усі права захищені.
+        </p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+          <a href="index.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-en">Home</a>
+          <a href="terms.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-en">Terms of Service</a>
+          <a href="privacy-policy.html" class="text-gray-500 hover:text-yellow-600 font-semibold lang-content lang-en">Privacy Policy</a>
+          
+          <a href="index.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-uk hidden">Головна</a>
+          <a href="terms.html" class="text-gray-500 hover:text-yellow-600 lang-content lang-uk hidden">Умови використання</a>
+          <a href="privacy-policy.html" class="text-gray-500 hover:text-yellow-600 font-semibold lang-content lang-uk hidden">Політика конфіденційності</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
